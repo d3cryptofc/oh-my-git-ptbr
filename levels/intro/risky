@@ -1,42 +1,43 @@
-title = Living dangerously
+title = Vivendo perigosamente!
 cards =
 
 [description]
 
-So you have decided to apply for time travel school, to learn how to use this time machine called "Git"!
+De repente você decide se matricular em uma escola de viagem no tempo para aprender a usar uma poderosa máquina do tempo chamada GIT, e você fica muito ansioso para começar!
 
-How exciting!
+Você já está terminando a papelada! Falta apenas preencher mais uma razão pela qual você deseja aprender GIT.
 
-You're almost done with the paperwork! You just need to fill in one more reason why you want to learn Git.
+Muito simples, não é?
 
 [congrats]
+Parabéns! Você conseguiu preenc..
 
-Suddenly, your cat jumps on the table, snatches away the form, and runs away! Oh no. All your hard work, gone!
+.. Espere..!?!
 
-You clearly need a better solution.
+Droga! Seu gato pulou em cima da mesa, agarrou o formulário e fugiu! Todo o seu trabalho árduo foi pro saco :(
 
-(Click "Next Level" as soon as you're ready!)
+Parece que você precisa de uma solução melhor.
+
+(clique em "Pŕoximo Nível" que logo em breve você irá conhecer uma nova solução!)
 
 [setup]
 
 rm -rf .git
 
-echo "~ Why I want to learn Git ~
+echo "~ Razões pela qual eu quero aprender GIT ~
 
-- So that I can undo mistakes
-- To track my projects over time" >> form.txt
+1. Para que eu possa desfazer erros.
+2. Para acompanhar meus projetos ao longo do tempo." >> formulario.txt
 
 [actions]
 
-test "$(cat form.txt | wc -l )" -ge 5 && echo "(Has been stolen by your cat.)
+test "$(cat formulario.txt | wc -l )" -ge 5 && echo "(Foi roubado pelo seu gato.)
 
 
 
-
-
-" > form.txt
+" > formulario.txt
 
 [win]
 
-# Add another line to form.txt!
-test "$(cat form.txt | wc -l )" -ge 5
+# Adicione mais uma razão, em uma nova linha, dentro do arquivo formulario.txt!
+test "$(cat formulario.txt | wc -l )" -ge 5
