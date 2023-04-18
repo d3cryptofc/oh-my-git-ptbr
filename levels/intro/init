@@ -1,13 +1,15 @@
-title = Enter the time machine
+title = Use a máquina do tempo
 cards = init
 
 [description]
 
-You've been accepted to time travel school! Yay! It's your first day! Your teacher explains:
+Demais! Você conseguiu ser aceito na escola de viagem no tempo!
 
-"To do anything with a time machine, you first need to initialize it!"
+Este é o seu primeiro dia e sua professora explica o seguinte:
 
-Drag that blue card up to play it!
+- Para poder fazer qualquer coisa com a máquina do tempo, primeiro você precisa inicia-la.
+
+Arraste o cartão azul para cima para inicia-la!
 
 [setup]
 
@@ -15,9 +17,11 @@ rm -rf .git
 
 [win]
 
-# Initialize the time machine!
+# Inicialize a máquina do tempo!
 test -d .git
 
 [congrats]
 
-Nice! See that little owl squirrel that appeared? It will be your companion, and always show you where you are in time!
+Muito fera!
+
+Você vê aquele esquilo-coruja que apareceu? Bem.. a partir de agora ele será seu companheiro, e sempre mostrará em que ponto do tempo você está!
