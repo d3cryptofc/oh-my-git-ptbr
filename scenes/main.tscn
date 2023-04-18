@@ -211,7 +211,7 @@ margin_right = 65.0
 margin_bottom = 39.0
 focus_mode = 0
 enabled_focus_mode = 0
-text = "Back"
+text = "Voltar"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -222,7 +222,7 @@ margin_right = 161.0
 margin_bottom = 39.0
 focus_mode = 0
 enabled_focus_mode = 0
-text = "Reload"
+text = "Recarregar"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -234,7 +234,7 @@ margin_right = 539.0
 margin_bottom = 39.0
 focus_mode = 0
 enabled_focus_mode = 0
-text = "Cards!"
+text = "Cartões!"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -246,7 +246,7 @@ margin_right = 225.0
 margin_bottom = 39.0
 focus_mode = 0
 enabled_focus_mode = 0
-text = "Tip!"
+text = "Dica!"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -272,7 +272,7 @@ focus_mode = 0
 custom_styles/hover = SubResource( 2 )
 custom_styles/normal = ExtResource( 4 )
 enabled_focus_mode = 0
-text = "Next level"
+text = "Próximo Nível"
 __meta__ = {
 "_edit_use_anchors_": false
 }
