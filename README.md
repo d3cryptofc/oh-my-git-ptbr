@@ -89,7 +89,7 @@ We have a [Code of Conduct](CODE_OF_CONDUCT.md) in place that applies to all pro
 
 ## Funded by
 
-<a href="https://www.bmbf.de/en/"><img src="https://timelens.io/assets/images/bmbf.svg" alt="Logo of the German Ministry for Education and Research" height="100px"></a>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="https://prototypefund.de/en/"><img src="https://timelens.io/assets/images/prototypefund.svg" alt="Logo of the Prototype Fund" height="100px"></a>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="https://okfn.de/en/"><img src="https://timelens.io/assets/images/okfde.svg" alt="Logo of the Open Knowledge Foundation Germany" height="100px"></a>
+<a href="https://www.bmbf.de/en/"><img src="https://www.bmbf.de/SiteGlobals/Frontend/Images/icons/_common/publisherlogo-en.svg?__blob=normal&v=5" alt="Logo of the German Ministry for Education and Research" height="100px"></a>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="https://prototypefund.de/en/"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/PrototypeFund_Logo.svg/1200px-PrototypeFund_Logo.svg.png" alt="Logo of the Prototype Fund" height="100px"></a>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="https://okfn.de/en/"><img src="https://prototypefund.de/wp-content/uploads/2016/07/logo-okfn.svg" alt="Logo of the Open Knowledge Foundation Germany" height="100px"></a>
 
 ## Thanks
 
