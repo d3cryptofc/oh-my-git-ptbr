@@ -1,105 +1,115 @@
 <img src="https://github.com/git-learning-game/oh-my-git/blob/main/images/oh-my-git.png" width="400">
 
-**Oh My Git!** is an open-source game about learning Git!
+**Oh My Git!** é um jogo de código aberto para aprender a utilizar a ferramenta GIT!
 
-## Play the game!
+## Jogue o jogo!
 
-You can download binaries for Linux, macOS, and Windows [from itch.io](https://blinry.itch.io/oh-my-git)!
+###### Plataformas suportadas:
+Linux, MacOS e Windows
 
-## Report bugs!
+###### Downloads
+- [**Original (Inglês)**](https://blinry.itch.io/oh-my-git)
 
-If something doesn't work or looks broken, please let us know! You can describe the issue you're having [in our issue tracker](https://github.com/git-learning-game/oh-my-git/issues).
+- [**Fork (Português Brasileiro)**](/releases/latest)
 
-If you have ideas for new features, we'd be excited to hear them! Also in that case, we invite you to [open an issue](https://github.com/git-learning-game/oh-my-git/issues)!
+## Reporte os bugs!
 
-## Build your own level!
+Se alguma coisa não funcionou ou parece quebrado, por favor deixe-nos saber! Você pode descrever o problema que estiver ocorrendo [abrindo uma issue no projeto original](https://github.com/git-learning-game/oh-my-git/issues).
 
-Wanna build your own level? Great! Here's how to do it:
+E se caso você possua alguma ideia para um novo recurso, ficariamos felizes em te ouvir sobre! Também nesse caso, convidamos vocẽ pra [abrir uma issue](https://github.com/git-learning-game/oh-my-git/issues).
 
-1. Download the latest version of the [Godot game engine](https://godotengine.org).
-1. Clone this repository.
-1. Run the game – the easiest way to do so is to run `godot scenes/main.tscn` from the project directory.
-1. Get a bit familiar with the levels which are currently there.
-1. Take a look into the `levels` directory. It's split into chapters, and each level is a file.
-1. Make a copy of an existing level or start writing your own. See the documention of the format below.
-1. Write and test your level. If you're happy with it, feel free to send it to us in a pull request! <3
+## Construa sua própria fase!
 
-### Level format
+Quer contruir sua própria fase? Ótimo! Aqui está como fazer isto:
+
+1. Baixe a versão 3.2.3 do [Godot Game Engine](https://github.com/godotengine/godot/releases/tag/3.2.3-stable) (versões maiores podem não funcionar).
+1. Clone este repositório.
+1. Rode o jogo – a forma mais fácil de fazer isso é rodar `godot .` estando na raiz do projeto.
+1. Fique um pouco familiarizado com as fases que estão lá atualmente.
+1. Dê uma olhada no diretório `levels`. É dividido em capítulos e cada fase é um arquivo.
+1. Faça uma cópia de uma fase existente ou comece a escrever o seu próprio. Veja a documentação do formato abaixo.
+1. Escreva e teste sua fase. Se vocẽ estiver feliz com isso, sinta-se livre para envia-la para nós em um pull request! <3
+
+### Formato da fase
 
 ```
-title = This is the level's title
+title = Este é o título da sua fase
 
 [description]
 
-This text will be shown when the level starts.
+Este texto será exibido quando a fase iniciar.
 
-It describes the task or puzzle the player can solve.
+Ele descreve a tarefa ou desafio que o player irá resolver.
 
 [cli]
 
-(optional) This text will be shown below the level description in a darker color.
+(opcional) Este texto será exibido abaixo da descrição da fase em uma cor escura.
 
-It should give hints to the player about command line usage and also maybe some neat tricks.
+Ele deve dar dicas para o jogador sobre o uso de linha de comando e também talvez truques divertidos.
 
 [congrats]
 
-This text will be shown after the player has solved the level.
+Este texto será exibido depois que o jogador concluir a fase.
 
-Can contain additional information, or bonus exercises.
+Pode conter informação adicional, ou exercícios extras para praticar.
 
 [setup]
 
-# Bash commands that set up the initial state of the level. An initial
-# `git init` is always done automatically. The default branch is called `main`.
+# Comandos bash que irão definir o estado inicial da fase.
+# Um `git init` inicial sempre é feito automaticamente.
+# A branch padrão ao inicilaizar chama-se 'main'.
 
-echo You > people_who_are_awesome
+echo "Você" > pessoa_que_eh_incrivel
 git add .
-git commit -m "Initial commit"
+git commit -m "commit inicial"
 
 [win]
 
-# Bash commands that check whether the level is solved. Write these as if you're
-# writing the body of a Bash function. Make the function return 0 if it's
-# solved, and a non-zero value otherwise. You can use `return`, and also, Bash
-# functions return the exit code of the last statement, which sometimes allows
-# very succinct checks. The comment above the win check will be shown in the game
-# as win condition text.
+# Comandos bash que irão verificar se a fase foi concluída.
+# Escreva-os como se você estivesse escrevendo o corpo de
+# uma função bash. Faça a função retornar 0 se ela for
+# concluída, e um valor diferente de 0 caso contrário.
+# Você pode usar 'return', e também, funções bash retornam
+# o código de término da última instrução, a qual algumas
+# vezes permite verificações muito sucintas. O comentário
+# acima da sua instrução de verificação será exibido no
+# jogo como uma condição de conquista.
 
-# Check whether the file has at least two lines in the latest commit:
+# Verifica se no arquivo do último commit possui duas linhas:
 test "$(git show HEAD:people_who_are_awesome | wc -l)" -ge 2
 ```
 
-A level can consist of multiple repositories. To have more than one, you can use sections like `[setup <name>]` and `[win <name>]`, where `<name>` is the name of the remote. The default name is "yours". All repositories will add each other as remotes. Refer to the [remote](levels/remotes) levels examples.
+Uma fase pode consistir de múltiplos repositórios. Para ter mais de um, vocẽ pode usar seções como `[setup <name>]` e `[win <name>]`, onde `<name>` é o nome do remote. O nome do remote padrão é "yours". Todos os repositórios irão adicionar um ao outro como remote. Veja alguns exemplos de fases usando [remote](levels/remote).
 
-### Level guidelines
+### Orientação de fase
 
-At this stage, we're still exploring ourselves which kind of levels would be fun! So feel free to try new things: basic introductions with a little story? Really hard puzzles? Levels where you have to find information? Levels where you need to fix a problem? Levels with three remotes?
+Ainda estamos explorando quais tipos de fases seriam divertidos! Portanto, sinta-se à vontade para experimentar coisas novas: introduções básicas com uma pequena história? Quebra-cabeças realmente difíceis? Fases onde você tem que encontrar informações? Fases em que você precisa corrigir um problema? Fases com três remotes?
 
-## Contribute code!
+## Contribua com código!
 
-To open the game in the [Godot editor](https://godotengine.org), run `godot project.godot`. You can then run the game using *F5*.
+Para abrir o jogo no Godot Editor, rode `godot project.godot`. Você também pode rodar o jogo pressionando F5 pelo Godot Editor.
 
-Feel free to make improvements to the code and send pull requests! There is one exception: because merge conflicts in Godot's scene files tends to be hard to resolve, before working on an existing *\*.tscn* file, please get in touch with us.
+Sinta-se livre para fazer melhorias para o código e enviar pull requests! Há uma exceção: conflitos de merge em arquivos de cenas Godot tendem a ser dificil de resolver, antes de trabalhar em um existente arquivo *\*.tscn*, por favor entre em contato conosco.
 
-To build your own binaries, you'll need Godot's [export templates](https://docs.godotengine.org/en/stable/getting_started/workflow/export/exporting_projects.html), and `zip`, `wget`, and `7z`. Then, run `make`. On Debian/Ubuntu, the Godot binary is called `godot3`, you might need to adjust the paths in the Makefile.
+Para construir seus próprios executáveis você irá precisar [instalar os templates de exportação do godot](https://docs.godotengine.org/en/stable/getting_started/workflow/export/exporting_projects.html). Então, rode `make`. No Debian/Ubuntu, o executável do Godot pode se chamar `godot3`, talvez seja preciso ajustar os caminhos no Makefile.
 
-## Code of Conduct
+## Código de conduta
 
-We have a [Code of Conduct](CODE_OF_CONDUCT.md) in place that applies to all project contributions, including issues and pull requests.
+Nós temos um [Código de Conduta](CODE_OF_CONDUCT.md) em vigor que se aplica a todas as contribuições do projeto, incluindo issues e pull requests.
 
-## Funded by
+## Fundado por
 
 <a href="https://www.bmbf.de/en/"><img src="https://www.bmbf.de/SiteGlobals/Frontend/Images/icons/_common/publisherlogo-en.svg?__blob=normal&v=5" alt="Logo of the German Ministry for Education and Research" height="100px"></a>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="https://prototypefund.de/en/"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/PrototypeFund_Logo.svg/1200px-PrototypeFund_Logo.svg.png" alt="Logo of the Prototype Fund" height="100px"></a>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="https://okfn.de/en/"><img src="https://prototypefund.de/wp-content/uploads/2016/07/logo-okfn.svg" alt="Logo of the Open Knowledge Foundation Germany" height="100px"></a>
 
-## Thanks
+## Obrigado
 
-- "success" sound by [Leszek_Szarzy, CC0](https://freesound.org/people/Leszek_Szary/sounds/171670/)
-- "swish" sound by [jawbutch, CC0](https://freesound.org/people/jawbutch/sounds/344408/)
-- "swoosh" sound by [WizardOZ, CC0](https://freesound.org/people/WizardOZ/sounds/419341/)
-- "poof" sound by [Saviraz, CC0](https://freesound.org/people/Saviraz/sounds/512217/)
-- "buzzer" sound by [Loyalty_Freak_Music, CC0](https://freesound.org/people/Loyalty_Freak_Music/sounds/407466/)
-- "typewriter_ding" sound by [_stubb, CC0](https://freesound.org/people/_stubb/sounds/406243/)
+- "success" efeito sonoro por [Leszek_Szarzy, CC0](https://freesound.org/people/Leszek_Szary/sounds/171670/)
+- "swish" efeito sonoro por [jawbutch, CC0](https://freesound.org/people/jawbutch/sounds/344408/)
+- "swoosh" efeito sonoro por [WizardOZ, CC0](https://freesound.org/people/WizardOZ/sounds/419341/)
+- "poof" efeito sonoro por [Saviraz, CC0](https://freesound.org/people/Saviraz/sounds/512217/)
+- "buzzer" efeito sonoro por [Loyalty_Freak_Music, CC0](https://freesound.org/people/Loyalty_Freak_Music/sounds/407466/)
+- "typewriter_ding" efeito sonoro por [_stubb, CC0](https://freesound.org/people/_stubb/sounds/406243/)
 
-## License
+## Licença
 
-[Blue Oak Model License 1.0.0](LICENSE.md) – a [modern alternative](https://writing.kemitchell.com/2019/03/09/Deprecation-Notice.html) to the MIT license. It's a a pleasant read! :)
+[Blue Oak Model License 1.0.0](LICENSE.md) – a [Alternativa Moderna](https://writing.kemitchell.com/2019/03/09/Deprecation-Notice.html) para a Licença MIT. É uma leitura agradável! :)
