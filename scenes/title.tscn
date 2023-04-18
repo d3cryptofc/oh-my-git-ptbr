@@ -19,22 +19,9 @@ margin_left = 790.778
 margin_top = 594.135
 margin_right = 1131.78
 margin_bottom = 650.135
-custom_fonts/font = ExtResource( 5 )
 custom_colors/font_color = Color( 0.533333, 0.392157, 0.392157, 1 )
-text = "by bleeptrack & blinry"
-align = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Label3" type="Label" parent="."]
-margin_left = 709.713
-margin_top = 621.416
-margin_right = 1209.71
-margin_bottom = 677.416
 custom_fonts/font = ExtResource( 5 )
-custom_colors/font_color = Color( 0.533333, 0.392157, 0.392157, 1 )
-text = "Original score by winniehell"
+text = "por bleeptrack & blinry, winniehell\nTradução PT-BR por Lelzin"
 align = 1
 __meta__ = {
 "_edit_use_anchors_": false
@@ -52,19 +39,19 @@ __meta__ = {
 [node name="Button" type="Button" parent="VBoxContainer"]
 margin_right = 351.0
 margin_bottom = 39.0
-text = "Levels"
+text = "Fases"
 
 [node name="Button3" type="Button" parent="VBoxContainer"]
 margin_top = 44.0
 margin_right = 351.0
 margin_bottom = 83.0
-text = "Sandbox"
+text = "Ambiente de Teste"
 
 [node name="Button2" type="Button" parent="VBoxContainer"]
 margin_top = 88.0
 margin_right = 351.0
 margin_bottom = 127.0
-text = "Quit"
+text = "Sair"
 
 [node name="Sprite" type="Sprite" parent="."]
 
@@ -72,6 +59,7 @@ text = "Quit"
 position = Vector2( 967.924, 306.066 )
 scale = Vector2( 0.320895, 0.320895 )
 texture = ExtResource( 2 )
+
 [connection signal="pressed" from="VBoxContainer/Button" to="." method="levels"]
 [connection signal="pressed" from="VBoxContainer/Button3" to="." method="sandbox"]
 [connection signal="pressed" from="VBoxContainer/Button2" to="." method="quit"]
