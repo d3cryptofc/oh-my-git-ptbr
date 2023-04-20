@@ -1,43 +1,45 @@
-title = Moving through time
+title = Movendo-se pela linha do tempo
 cards = checkout commit-auto
 
 [description]
 
-The yellow boxes are frozen points in time, we call them "commits"! You can travel between them using the "checkout" card! (Try it!)
+Cada uma destas caixas amarelas são acontecimentos na linha do tempo, nós chamamos elas de "commits"!
 
-Can you find out what happened here? Then, while on the last commit, edit the files to fix the problem, and make a new commit!
+Você pode viajar entre os commits usando o cartão "checkout" (tente fazer isso!)
+
+Você consegue descobrir que aconteceu aqui?.. Bom, então quando estiver no ultimo commit que foi feito, edite os arquivos para resolver o problema e faça um novo commit!
 
 [cli]
 
-To checkout a specific commit, type `git checkout`, then a space, and then right click on the commit you want!
+Para ir a um commit especifico, digite `git checkout`, pressione espaço e então dê um clique com botão direito em uma das caixas amarelas (commit) que você quer!
 
-This will insert the commit's unique identifier!
+Isto irá inserir o identificador único do commit no fim de seu comando! Bem mais fácil que procurar no comando `git log`.
 
 [setup]
 
-echo "This piggy bank belongs to the big sister.
-It contains 10 coins." > piggy_bank
+echo "Este cofrinho pertence à irmã mais velha.
+Nele contém 10 moedas." > cofrinho
 git add .
-git commit -m "The beginning"
+git commit -m "O começo de tudo"
 
-echo "A young girl with brown, curly hair." > little_sister
+echo "Uma jovem garota com cabelos castanhos e cacheados." > irmazinha
 git add .
-git commit -m "Little sister comes in"
+git commit -m "Chegou a irmã mais nova"
 
-echo "Has 10 coins." >> little_sister
-echo "This piggy bank belongs to the big sister.
-It is empty." > piggy_bank
+echo "Está com 10 moedas." >> irmazinha
+echo "Este cofrinho pertence à irmã mais velha.
+Ele está vazio." > cofrinho
 git add .
-git commit -m "Little sister does something"
+git commit -m "Irmã mais nova faz algo.."
 
 git checkout HEAD^^
 git branch -df main
 
 [win]
 
-# Restore sisterly peace.
-{ git show HEAD:piggy_bank | grep "10 coins"; } && { git show HEAD:little_sister | grep -v "10 coins"; } && { git rev-parse HEAD^^^; }
+# Restaure a paz entre as irmãs
+{ git show HEAD:cofrinho | grep -i "10 moedas"; } && { git show HEAD:irmazinha | grep -v "10 moedas"; } && { git rev-parse HEAD^^^; }
 
 [congrats]
 
-Wonderful! Now that you're getting familiar with the time machine, let's look at some more complicated situations...
+É isso aí! Agora que vocẽ está se familiarizando com a máquina do tempo, deixe-nos mostrar situações ainda mais complicadas..
