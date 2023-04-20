@@ -1,29 +1,34 @@
-title = Creating branches
+title = Criando ramificações (branches)
 cards = checkout commit-auto branch branch-delete reset-hard
 
 [description]
 
-You were invited to two parties! At one of them, your favorite band is playing - and the other one is your best friend's birthday party. Where should you go? No worries - as a time travel agent in training, you can go to both parties!
+Você foi convidado(a) para duas festas! Em uma delas, sua banda favorita está tocando - e a outra é a festa de aniversário de sua melhor amiga. Onde você deveria ir?
 
-To make it easier to tell which timeline is which, you can create time portals! (We call these "branches".)
+Não se preocupe - como um(a) agente de viagem no tempo em treinamento, você poderá ir às duas festas!
+
+Para fazer isso de forma mais simples, para marcar qual linha do tempo é qual, vocẽ pode criar portais do tempo! (nós chamamos isto de "branch")
 
 [cli]
 
-Branches also make it really easy to travel between different places using the command line! As soon as you have a branch called "birthday", you can type `git checkout birthday` to travel to it!
+Branches também fazem isso de forma fácil para conseguir viajar entre diferentes lugares usando a linha de comando!
+
+Logo em breve como você terá uma branch chamada "aniversario", você irá poder digitar `git checkout aniversario` para viajar para ela!
 
 [setup]
 
-echo "You wrap the birthday present, and grab your concert ticket." > you
+echo "Você embrulha o presente de aniversário, e pega seu ingresso do concerto." > voce
 git add .
-git commit -m "Evening preparations"
-echo "You go to the birthday party!" >> you
+git commit -m "Preparativos da noite."
+
+echo "Você vai para a festa de aniversário!" >> voce
 git add .
-git commit -m "Go to the birthday"
+git commit -m "Vai para a festa de aniversário."
 
 git checkout HEAD~1
-echo "You go to the concert!" > you
+echo "Você vai para o concerto!" >> voce
 git add .
-git commit -m "Go to the concert"
+git commit -m "Vai para o concerto."
 
 git checkout HEAD~1
 
@@ -31,14 +36,14 @@ git branch -D main
 
 [win]
 
-# Create a branch called 'birthday' that points to the birthday timeline.
-git show birthday | grep 'to the birthday'
+# Crie uma branch chamada 'aniversario' que aponte para a linha do tempo da festa de aniversário.
+git show aniversario | grep 'para a festa de aniversário'
 
-# Create a branch called 'concert' that points to the concert timeline.
-git show concert | grep 'to the concert'
+# Crie uma branch chamada 'concerto' que aponte para a linha do tempo do concerto.
+git show concerto | grep 'para o concerto'
 
 [congrats]
 
-Now you can travel between those branches easily (using `git checkout`) - try it!
+Agora vocẽ pode viajar entre suas branches facilmente usando `git checkout <nome da branch>` - tente isso!
 
-Your friend is happy that you made it to the birthday party and you also got your concert ticket signed. Yay!
+Seu amigo(a) está muito feliz que você chegou na festa de aniversário dele, e você também teve seu ingresso do concerto autografado. Eu goooxtum...
