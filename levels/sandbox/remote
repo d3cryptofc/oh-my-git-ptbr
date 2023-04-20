@@ -1,22 +1,22 @@
-title = Sandbox with a remote
+title = Ambiente de teste com repositório remoto
 cards = checkout commit-auto pull fetch push
 
 [description]
 
-Here's a sandbox with a remote! Try pulling, fetching, or pushing!
+Aqui está um ambiente de teste com um repositório remoto! Tente puxar (pull), baixar (fetch) ou empurrar (push)!
 
-How can you push tags and branches on a remote? How can you delete them again?
+Como você faria para empurrar tags e branches para um repositório remoto? E como faria para deleta-los do repositório remoto?
 
 [setup yours]
 
-echo "Line 1" > essay
+echo "Linha 1" > ensaio
 git add .
-git commit -m "Initial commit"
+git commit -m "Commit inicial"
 
-git push -u friend main
+git push -u amigo main
 
-[setup friend]
+[setup amigo]
 
 git checkout main
-echo "Line 2" >> essay
-git commit -am "Another line"
+echo "Linha 2" >> ensaio
+git commit -am "Uma outra linha"
