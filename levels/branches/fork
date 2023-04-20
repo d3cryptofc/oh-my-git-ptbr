@@ -1,65 +1,68 @@
-title = Make parallel commits
+title = Fazendo commits paralelos
 cards = checkout commit-auto
 
 [description]
 
-Did you know that creating parallel timelines is perfectly legal and safe? It's true!
+Você sabia que criar linhas do tempo paralelas/alternativas é perfeitamente legal e seguro? É verdade!
 
-Can you find out when things went wrong in this zoo? Then, go back to the last good commit and create a parallel universe where everyone is happy!
+Consegue descobrir quando foi que as coisas deram errado neste zoológico? Então volte para o ultimo commit bom e crie um universo paralelo onde todos estão felizes!
 
 [cli]
 
-The blue animal represents a concept known as the "HEAD pointer" in Git: It shows you which commit is the current one.
+O animal azul representa um conceito conhecido como "ponteiro HEAD" no GIT.
 
-Here's a cool trick to go to the previous commit: 
+Ele mostra para você qual é o atual commit e para qual ele está apontando, em outras palavras, significa também o momento onde vocẽ está na linha do tempo. 
+
+Esta é uma dica interessante para ir ao commit anterior:
 
     git checkout HEAD^
 
-You can also go back two commits by typing, for example: 
+você também pode voltar dois commits digitando por exemplo:
 
     git checkout HEAD~2
 
 [setup]
 
-mkdir cage
-echo "Looks very hungry." > cage/lion
+mkdir jaula
+echo "Parece muito faminto." > jaula/leao
 
-echo "A small child.
-It really loves cats!" > child
+echo "Uma criança pequena.
+Ela realmente ama gatos!" > crianca
 git add .
-git commit -m "The beginning"
+git commit -m "O começo de tudo."
 
-echo "It's holding a lollipop." >> child
-git commit -am "The child buys something"
+echo "Ela está segurando um pirulito." >> crianca
+git commit -am "A criança compra alguma coisa."
 
-mv child cage
+mv crianca jaula
 git add .
-git commit -m "The child climbs somewhere"
+git commit -m "A criança sobe em alguma coisa."
 
-git rm cage/child
-echo "Looks happy. :)" > cage/lion
+git rm jaula/crianca
+echo "Parece feliz. :)" > jaula/leao
 git add .
-git commit -m "Oh no"
+git commit -m "Ah não! Que tragédia!"
 
-echo "It's sleeping." > cage/lion
+echo "Ele está dormindo." > jaula/leao
 git add .
-git commit -m "Nap time!"
+git commit -m "Hora do soninho!"
 
 git checkout --detach
 git branch -d main
 
 [win]
 
-# Make sure that the child is happy.
-git ls-tree --name-only -r HEAD | grep child
+# Tenha certeza que a criança está feliz.
+git ls-tree --name-only -r HEAD | grep crianca
 
-# Make sure that the lion gets something to eat.
-git show HEAD:cage/lion | grep -v "very hungry"
+# Tenha certeza que o leão conseguiu alguma coisa pra comer.
+git show HEAD:jaula/leao | grep -v "faminto"
 
 [congrats]
 
-Whew, good job! This seems like a *much* better outcome.
 
-Feel free to add more parallel timelines, or make them longer.
+Ufa, bom trabalho! Parece um resultado bem melhor que o outro.
 
-If you're ready, our next mission is already waiting...
+Fique à vontade para adicionar mais linhas paralelas, ou fazer elas mais longas.
+
+Quando achar que for a hora certa, nossa próxima missão estará te esperando.
