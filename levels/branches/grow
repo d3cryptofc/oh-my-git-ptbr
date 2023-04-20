@@ -1,35 +1,36 @@
-title = Branches grow with you!
+title = Ramos crescem com você!
 cards = checkout commit-auto branch branch-delete reset-hard
 
 [description]
 
-Note that there are two options to "travel to the end of a timeline":
+Observe que há duas opções para "viajar até o final de uma linha do tempo":
 
-First, you can directly travel to the commit, like we've done it before.
+Primeiro, você pode viajar diretamente para o commit, como temos feito isso antes.
 
-And second, you can travel to the branch label. In this case, when you make a new commit, the branch will grow with you, and still point at the end of the timeline!
+E segundo, vocẽ pode viajar usando o nome/etiqueta da branch. Nesse caso, quando você faz um novo commit, a branch crescerá com vocẽ, e ainda irá apontar para o final da linha do tempo (seu ultimo commit)!
 
 [cli]
 
-To travel to a branch, type `git checkout name_of_the_branch`.
+Para viajar para uma branch, digite `git checkout <nome da branch>`.
 
-And to travel to the last commit, type `git checkout --detach name_of_the_branch`.
+E para viajar para o último commit, digite `git checkout --detach <nome da branch>`.
 
 [setup]
 
-echo "You wrap the birthday present, and grab your concert ticket." > you
+echo "Você embrulha o presente de aniversário, e pega seu ingresso do concerto." > voce
 git add .
-git commit -m "Evening preparations"
-echo "You go to the birthday party!" >> you
+git commit -m "Preparativos da noite."
+echo "Você vai para a festa de aniversário!" >> voce
+
 git add .
-git commit -m "Go to the birthday"
-git branch birthday
+git commit -m "Vai para a festa de aniversário."
+git branch aniversario
 
 git checkout HEAD~1
-echo "You go to the concert!" > you
+echo "Você vai para o concerto!" >> voce
 git add .
-git commit -m "Go to the concert"
-git branch concert
+git commit -m "Vai para o concerto"
+git branch concerto
 
 git checkout HEAD~1
 
@@ -37,13 +38,23 @@ git branch -D main
 
 [win]
 
-# Travel directly to the last yellow commit of the birthday timeline, make a change to 'you', and make a commit
+# Viaje diretamente para o último commit da linha do tempo 'aniversário', faça uma mudança em 'voce', e faça um commit.
 for commit in $(git cat-file --batch-check='%(objectname) %(objecttype)' --batch-all-objects | grep 'commit$' | cut -f1 -d' '); do
-    if test $(git rev-parse $commit^) = $(git rev-parse birthday); then
+    if test $(git rev-parse $commit^) = $(git rev-parse aniversario); then
         return 0
     fi
 done
 return 1
 
-# Travel to the blue 'concert' branch, make a change to 'you', and a commit.
-git show concert^ | grep "Go to the concert"
+# Viaje para a branch em azul 'concerto', faça uma mudança em 'voce', e um commit.
+git show concerto^ | grep "Vai para o concerto"
+
+[congrats]
+
+Você foi muito bem!
+
+Note que o ramo (branch) só irá acompanhar seus novos commits caso o HEAD (ponteiro que informa onde você está no tempo) esteja apontando para sua branch.
+
+Em outras palavras, a branch só irá acompanhar os novos commits caso vocẽ estiver acompanhando ela ao invés de um commit.
+
+Enquanto que ao estar em um commit vocẽ não acompanha os novos automaticamente, sendo necessário usar `git checkout` e acrescentar o identificador único do commit para segui-lo.
