@@ -1,36 +1,39 @@
-title = Unexpected Roommates
+title = Colegas de quarto inesperados
 cards = file-delete
 
 [description]
 
-The first day at Time Travel School comes to an end and you receive the key to your room.
-Full of excitement you open the door just to find... spider webs! Spider webs everywhere!
+O primeiro dia na escola de viagem no tempo chega ao fim e você recebe a chave do seu quarto.
 
-Remove all the spider webs you can find with the remove card!
+Totalmente empolgado você abre a porta para apenas encontrar.. Teias de aranha! Teias de aranha em todo o lugar! 
+
+Remova todas as teias de aranha, você pode realizar isto com o cartão de remoção!
 
 [cli]
 
-On the command line, you can easily delete all files ending in -web using this command:
+Na linha de comando, você pode facilmente deletar todos os arquivos que iniciam com teia- usando este comando:
 
-    rm *web
+    rm teia_*
 
 [setup]
 
-echo A tiny spider web is next to your window. > tiny_web
-echo A big spider web sticks above your bed. > big_web
-echo A cozy bed. > bed
-echo An extra thick spider web is right beside your door. > thick_web
+echo Uma pequena teia de aranha está ao lado de sua janela. > teia_pequena
+echo Uma grande teia de aranha gruda em cima da sua cama. > teia_grande
+echo Uma cama muito aconchegante. > cama
+echo Uma teia de aranha bem espessa está ao lado de sua porta. > teia_espessa
 
 [win]
 
-# Remove all spider webs.
-! ls | grep thick_web &&
-! ls | grep big_web &&
-! ls | grep tiny_web
+# Remova todas as teias de aranha!
+! ls | grep teia_espessa &&
+! ls | grep teia_grande &&
+! ls | grep teia_pequena
 
-# But make sure you keep your bed!
-ls | grep bed
+# Tenha certeza que você ainda possui sua cama!
+ls | grep cama
 
 [congrats]
 
-Your room looks now very tidy and cozy! Time to unpack your stuff!
+Agora sim!
+
+Seu quarto agora parece muito bem arrumado e aconchegante! Hora de desempacotar suas coisas!
