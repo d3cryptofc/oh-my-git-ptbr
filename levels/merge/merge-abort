@@ -1,35 +1,33 @@
-title = Abort a merge
+title = Aborte uma tentativa de junção
 cards = checkout commit-auto merge merge-abort
 
 [description]
 
-Sometimes you want to merge two commits, but a merge conflict occurs that you currently don't want to resolve.
+Algumas vezes pode acontecer de você querer juntar dois commits, mas ocorre um conflito que vocẽ não ta afim de resolver agora.
 
-In these situations you can abort the merge to merge later. Use
+Nessas situações você pode abortar o merge para deixar para outra hora. Use:
+
     git merge --abort
-when you are in a merge process.
-
-Try to merge both commits and abort the merge afterwards.
 
 [setup]
 
-echo "A new day is starting" > you
+echo "Um novo dia está começando." > voce
 
 git add .
-git commit -m "Start"
+git commit -m "Início"
 
-echo "Walking down the Main Lane." >> you
+echo "Descendo a pista principal." >> voce
 
 git add .
-git commit -m "Main Lane"
+git commit -m "Pista principal."
 
 
 git checkout HEAD~1
 
-echo "Walking down the Side Lane." >> you
+echo "Descendo a pista do lado." >> voce
 
 git add .
-git commit -m "Side Lane"
+git commit -m "Pista do lado."
 
 git checkout HEAD~1
 
@@ -43,12 +41,12 @@ fi
 
 [win]
 
-# You tried to merge?
+# Você tentou realizar um merge?
 test -f .git/secretfile
 
-# You aborted to merge?
+# Você abortou o merge?
 test -f .git/secretfile && ! test -f .git/MERGE_HEAD && ! git rev-parse HEAD^^
 
 [congrats]
 
-Aaah, let's merge later...
+Aaaah, conflitos? Outra hora faço o merge..
