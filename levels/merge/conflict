@@ -1,47 +1,53 @@
-title = Contradictions
+title = Contradições
 cards = checkout commit-auto merge reset-hard
 
 [description]
 
-Sometimes, timelines will contradict each other.
+Algumas vezes, as linhas do tempo entrarão em contradição.
 
-For example, in this case, one of our clients wants these timelines merged, but they ate different things for breakfast in both timelines.
+Por exemplo, neste caso, um de nossos clientes deseja que essas linhas do tempo fiquem juntas, mas comeu coisas diferentes no café da manhã em ambas as linhas do tempo.
 
-Try to merge them together! You'll notice that there will be a conflict! The time machine will leave it up to you how to proceed: you can edit the problematic item, it will show you the conflicting sections. You can keep either of the two versions - or create a combination of them! Remove the >>>, <<<, and === markers, and make a new commit to finalize the merge!
+Tente juntar as duas! Você será notificado que há um conflito entre as duas! A máquina do tempo irá deixar você escolher como se deve proceder:
 
-Let your finalized timeline be the "main" one.
+Você pode editar os itens problematicos, ela mostrará para vocẽ as seções em conflito.
+
+Vocẽ pode manter qualquer uma das duas versões ou criar uma combinação delas!
+
+Remova os marcadores >>>, <<<, e ===, e faça um novo commit para finalizar a junção das linhas do tempo!
+
+Deixe sua linha do tempo final ser a 'main', as outras devem ficar intactas.
 
 [setup]
 
-echo "Just woke up. Is hungry." > sam
+echo "Acabou de acordar. Está faminto." > alex
 git add .
-git commit -m "The beginning"
+git commit -m "o começo de tudo."
 
-git checkout -b pancakes
-echo "Had blueberry pancakes with maple syrup for breakfast." > sam
+git checkout -b panquecas
+echo "Teve panquecas de mirtilo com xarope de bordo no café da manhã." > alex
 git add .
-git commit -m "Pancakes!"
+git commit -m "Panquecas!"
 
 echo "
-Is at work." >> sam
-git commit -am "Go to work"
+Está no trabalho." >> alex
+git commit -am "Vai para o trabalho."
 
-git checkout -b muesli main
-echo "Had muesli with oats and strawberries for breakfast." > sam
+git checkout -b cereal main
+echo "Teve cereal com aveia e morangos no café da manhã." > alex
 git add .
-git commit -m "Muesli!"
+git commit -m "Cereal!"
 
 echo "
-Is at work." >> sam
-git commit -am "Go to work"
+Está no trabalho." >> alex
+git commit -am "Vai para o trabalho."
 
 git checkout main
 
 [win]
 
-# Make a breakfast compromise in the 'main' branch.
+# Realize o compromisso de café da manhã no ramo 'main'.
 git rev-parse main^ && test "$(git rev-parse main^1^^)" = "$(git rev-parse main^2^^)"
 
 [congrats]
 
-Yum, that sounds like a good breakfast!
+Yum, que delícia! Parece ser um bom café da manhã!
