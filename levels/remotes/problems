@@ -1,33 +1,37 @@
-title = Problems
+title = Problemas
 cards = checkout add pull push commit-auto merge
 
 [description]
 
-Both you and your friend have been working on the file, and want to sync up!
+Você e seu amigo estão trabalhando em um arquivo, e desejam sincroniza-lo.
 
 [setup yours]
 
-echo "The bike shed should be ???" > file
+echo "A oficina de biciletas deve ser ???" > file
 git add .
-git commit -m "initial"
+git commit -m "Início."
 
-git push -u friend main
+git push -u amigo main
 
-echo "The bike shed should be green" > file
+echo "A oficina de biciletas deve ser verde" > file
 
-[setup friend]
+[setup amigo]
 
 git checkout main
 
-echo "The bike shed should be blue" > file
-git commit -a -m "friends version"
+echo "A oficina de biciletas deve ser azul" > file
+git commit -a -m "Sugestão do amigo."
 
 [win]
 
-# Commit your local changes.
+# Faça um commit de suas mudanças locais.
 test "$(git status -s)" = ""
 
-[win friend]
+[win amigo]
 
-# Look at your friend's suggestion, make a compromise, and push it back.
+# Observe a sugestão de seu amigo, faça um acordo recusando a sugestão dele.
 git rev-parse main^ && test "$(git rev-parse main^1^)" = "$(git rev-parse main^2^)"
+
+[congrats]
+
+Enfim chegaram a um consenso.
