@@ -1,47 +1,51 @@
-title = Friend
+title = Um amigo
 cards = pull push commit-auto checkout
 
 [description]
 
-Your friend added another line to your essay! Get it, add a third one and send it to them!
+Seu amigo adicionou outra linha para o seu ensaio! Obtenha ela, adicione uma terceira linha e mande para ele!
 
-Take turns until you have five lines!
+Revezem até você ter cinco linhas em seu arquivo de ensaio!
 
 [setup yours]
 
-echo "Line 1" > essay
+echo "Linha 1" > ensaio
 git add .
-git commit -m "One line"
+git commit -m "Uma linha"
 
-git push -u friend main
+git push -u amigo main
 
-[setup friend]
+[setup amigo]
 
 git checkout main
-echo "Line 2, gnihihi" >> essay
-git commit -am "Another line"
+echo "Linha 2, gnihihi" >> ensaio
+git commit -am "Outra linha"
 
-[actions friend]
+[actions amigo]
 
 if test "$(git log --oneline | wc -l)" -eq 3; then
     git reset --hard main # Necessary because the working directory isn't updated when we push to the friend.
-    echo "Line 4, blurbblubb" >> essay
-    git commit -am "Final line"
-    hint "Oh nice, I added a fourth line!"
+    echo "Linha 4, blurbblubb" >> ensaio
+    git commit -am "Linha final"
+    hint "Legal. Eu adicionei a quarta linha, pode puxar!"
 fi
 
 [win]
 
-# Got the second line from your friend
-git show HEAD:essay | grep gnihihi
+# 1. Obtenha a segunda linha de seu amigo.
+git show HEAD:ensaio | grep gnihihi
 
-# Got the fourth line from your friend.
-git show HEAD:essay | grep blurbblubb
+# 3. Obtenha a quarta linha de seu amigo.
+git show HEAD:ensaio | grep blurbblubb
 
-[win friend]
+[win amigo]
 
-# The friend got a third line from you
-test "$(git show HEAD:essay | wc -l)" -ge 3
+# 2. O seu amigo obteve a terceira linha de você.
+test "$(git show HEAD:ensaio | wc -l)" -ge 3
 
-# The friend got a fifth line from you
-test "$(git show HEAD:essay | wc -l)" -ge 5
+# 4. O seu amigo obteve a quinta linha de você.
+test "$(git show HEAD:ensaio | wc -l)" -ge 5
+
+[congrats]
+
+Bom trabalho! É ótimo poder trabalhar em equipe.
