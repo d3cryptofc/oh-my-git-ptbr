@@ -87,17 +87,17 @@
     {
         "id": "reset-hard",
         "command": "git reset --hard [commit]",
-        "description": "Apaga todos os commits à frente do commit especificado e destrói os arquivos dos commits."
+        "description": "Faz o ponteiro da branch atual apontar para um commit específico. (HEAD -> branch -> commit)"
     },
     {
         "id": "reset",
         "command": "git reset [commit]",
-        "description": "Apaga todos os commits à frente do commit especificado, mas mantém os arquivos."
-    },
+        "description": "Parecido com `git reset --hard`, mas pode trazer alterações feitas no lugar anterior, porém sem commit."
+    },    
     {
         "id": "reset-file",
         "command": "git reset [file]",
-        "description": "Redefina a versão do índice de um arquivo para a versão no commit em que você está."
+        "description": "Descarta mudanças de um arquivo do índice para a versão do arquivo no commit em que você está."
     },
     {
         "id": "cherry-pick",
