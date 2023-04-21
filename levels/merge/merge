@@ -1,82 +1,96 @@
-title = Merging timelines
+title = Juntando linhas do tempo
 cards = checkout commit-auto merge
 
 [description]
 
-Here's a trick so that you can sleep a bit longer: just do all your morning activities in parallel universes, and then at the end, merge them together!
+Aqui vai um truque para você dormir mais um pouco: é só fazer todas as suas atividades matinais em universos paralelos e, no final, juntá-las usando merge!
+
+[cli]
+
+Para fazer o merge de duas linhas do tempo você precisa estar em um commit e jogar a carta merge em um commit de outra linha do tempo para que a outra se junte à sua linha do tempo.
+
+Ao juntar duas linhas do tempo com o cartão merge, será necessário realizar dois merge commits, a visualização do histórico de commits pode não ficar muito agradável.
+
+Para juntar todas elas em um único merge commit se faz necessário usar a linha de comando, pois o cartão do jogo só tem suporte para passar um só commit.
+
+    git merge ID_COMMIT1 ID_COMMIT2
+
+Dessa maneira o resultado fica bem mais agradável e simétrico.
 
 [setup]
 
-echo "You do not have a baguette.
+echo "Você não tem uma baguete.
 
-You do not have coffee.
+Você não tem café.
 
-You do not have a donut." > you
+Você não tem uma rosquinha." > voce
 
 git add .
-git commit -m "The Beginning"
+git commit -m "O começo de tudo."
 
-echo "You have a baguette.
+echo "Você tem uma baguete.
 
-You do not have coffee.
+Você não tem café.
 
-You do not have a donut." > you
+Você não tem uma rosquinha." > voce
 git add .
-git commit -m "You buy a baguette"
+git commit -m "Você compra uma baguete."
 
-echo "You ate a baguette.
+echo "Você comeu uma baguete.
 
-You do not have coffee.
+Você não tem café.
 
-You do not have a donut." > you
+Você não tem uma rosquinha." > voce
 git add .
-git commit -m "You eat the baguette"
+git commit -m "Você come a baguete."
 
-git checkout HEAD~2
-echo "You do not have a baguette.
+git checkout HEAD^^
 
-You have coffee.
+echo "Você não tem uma baguete.
 
-You do not have a donut." > you
+Você tem café.
+
+Você não tem uma rosquinha." > voce
 git add .
-git commit -m "You buy some coffee"
+git commit -m "Vocẽ compra um café."
 
-echo "You do not have a baguette.
+echo "Você não tem uma baguete.
 
-You drank coffee.
+Você tomou café.
 
-You do not have a donut." > you
+Você não tem uma rosquinha." > voce
 git add .
-git commit -m "You drink the coffee"
+git commit -m "Você toma café."
 
-git checkout HEAD~2
-echo "You do not have a baguette.
+git checkout HEAD^^
 
-You do not have coffee.
+echo "Você não tem uma baguete.
 
-You have a donut." > you
+Você não tem café.
+
+Você tem uma rosquinha." > voce
 git add .
-git commit -m "You buy a donut"
+git commit -m "Você compra uma rosquinha."
 
-echo "You do not have a baguette.
+echo "Você não tem uma baguete.
 
-You do not have coffee.
+Você não tem café.
 
-You ate a donut." > you
+Você comeu uma rosquinha." > voce
 git add .
-git commit -m "You eat the donut"
+git commit -m "Você come a rosquinha."
 
 git checkout --detach
 git branch -D main
 
 [win]
 
-# Build a situation where you consumed a baguette, a coffee, *and* a donut.
-{ git show HEAD:you | grep "You ate.*baguette"; } && { git show HEAD:you | grep "You drank.*coffee"; } && { git show HEAD:you | grep "You ate.*donut"; }
+# Construa uma situação onde você consumiu uma baguete, um café e uma rosquinha.
+{ git show HEAD:voce | grep "Você comeu.*baguete"; } && { git show HEAD:voce | grep "Você tomou.*café"; } && { git show HEAD:voce | grep "Você comeu.*rosquinha"; }
 
-# Be on a merge commit.
+# Deve haver um commit de mesclagem.
 test "$(git log --pretty=%P -n 1 HEAD | wc -w)" -ge 2
 
 [congrats]
 
-I wonder if you're more relaxed when you *sleep* in parallel timelines...
+Eu me pergunto se você fica mais relaxado quando *dorme* em linhas de tempo paralelas...
