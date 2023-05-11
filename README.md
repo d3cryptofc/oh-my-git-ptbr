@@ -10,7 +10,7 @@ Linux, MacOS e Windows
 ###### Downloads
 - [**Original (Inglês)**](https://blinry.itch.io/oh-my-git)
 
-- [**Fork (Português Brasileiro)**](/releases/latest)
+- [**Fork (Português Brasileiro)**](../../releases/latest)
 
 ## Nos ajude a traduzi-lo! 🌎
 
