@@ -2,7 +2,7 @@
 
 **Oh My Git!** é um jogo de código aberto para aprender a utilizar a ferramenta GIT!
 
-## Jogue o jogo!
+## Jogue o jogo! 🎮
 
 ###### Plataformas suportadas:
 Linux, MacOS e Windows
@@ -12,13 +12,28 @@ Linux, MacOS e Windows
 
 - [**Fork (Português Brasileiro)**](/releases/latest)
 
-## Reporte os bugs!
+## Nos ajude a traduzi-lo! 🌎
+
+Quanto mais contribuidores obtivermos, mais rápido o jogo será traduzido e melhor serão as traduções, portanto, sinta-se à vontade para contribuir com o projeto, até mesmo se for um novato com git :)
+
+Os seguintes passos devem ser seguidos:
+
+1. Veja se a parte do jogo em questão já não está sendo traduzida por outra pessoa [aqui nesta issue](https://github.com/d3cryptofc/oh-my-git-ptbr/issues/1), a menos que o propósito seja fazer uma melhoria ou correção de tradução ou gramática.
+
+2. Faça um fork deste repositório, e antes de começar a trabalhar na alteração realize o pull request, após isso iremos atualizar à lista na issue e confirmaremos a mesclagem quando for possível.
+<br/></br>Caso sinta insegurança, nos aguarde visualizar o seu pull request e comentar que você pode iniciar o trabalho sem nenhum problema.
+
+3. As mensagens de commit deverão ser em inglês, seguindo o mesmo padrão do projeto, tenha como referência o [histórico de commits](../../commits/main), correções na mensagem de commit serão requisitados caso haja divergências com o padrão então não se preocupe caso fique com alguma dúvida.
+
+Boa sorte! ❤️
+
+## Reporte os bugs! 🐞
 
 Se alguma coisa não funcionou ou parece quebrado, por favor deixe-nos saber! Você pode descrever o problema que estiver ocorrendo [abrindo uma issue no projeto original](https://github.com/git-learning-game/oh-my-git/issues).
 
 E se caso você possua alguma ideia para um novo recurso, ficariamos felizes em te ouvir sobre! Também nesse caso, convidamos vocẽ pra [abrir uma issue](https://github.com/git-learning-game/oh-my-git/issues).
 
-## Construa sua própria fase!
+## Construa sua própria fase! 🧩
 
 Quer contruir sua própria fase? Ótimo! Aqui está como fazer isto:
 
@@ -30,7 +45,7 @@ Quer contruir sua própria fase? Ótimo! Aqui está como fazer isto:
 1. Faça uma cópia de uma fase existente ou comece a escrever o seu próprio. Veja a documentação do formato abaixo.
 1. Escreva e teste sua fase. Se vocẽ estiver feliz com isso, sinta-se livre para envia-la para nós em um pull request! <3
 
-### Formato da fase
+### Formato da fase ✍️
 
 ```
 title = Este é o título da sua fase
