@@ -16,12 +16,13 @@ __meta__ = {
 
 [node name="Label2" type="Label" parent="."]
 margin_left = 790.778
-margin_top = 594.135
+margin_top = 681.816
 margin_right = 1131.78
-margin_bottom = 650.135
-custom_colors/font_color = Color( 0.533333, 0.392157, 0.392157, 1 )
+margin_bottom = 742.816
 custom_fonts/font = ExtResource( 5 )
-text = "por bleeptrack & blinry, winniehell\nTradução PT-BR por Lelzin"
+custom_colors/font_color = Color( 0.533333, 0.392157, 0.392157, 1 )
+text = "por bleeptrack & blinry, winniehell
+Tradução PT-BR por Lelzin"
 align = 1
 __meta__ = {
 "_edit_use_anchors_": false
@@ -29,9 +30,9 @@ __meta__ = {
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 margin_left = 784.553
-margin_top = 702.517
+margin_top = 790.198
 margin_right = 1136.55
-margin_bottom = 885.517
+margin_bottom = 973.198
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -56,10 +57,9 @@ text = "Sair"
 [node name="Sprite" type="Sprite" parent="."]
 
 [node name="oh-my-git" type="Sprite" parent="Sprite"]
-position = Vector2( 967.924, 306.066 )
+position = Vector2( 967.924, 393.747 )
 scale = Vector2( 0.320895, 0.320895 )
 texture = ExtResource( 2 )
-
 [connection signal="pressed" from="VBoxContainer/Button" to="." method="levels"]
 [connection signal="pressed" from="VBoxContainer/Button3" to="." method="sandbox"]
 [connection signal="pressed" from="VBoxContainer/Button2" to="." method="quit"]
