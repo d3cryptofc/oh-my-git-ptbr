@@ -1,4 +1,6 @@
-<img src="https://github.com/git-learning-game/oh-my-git/blob/main/images/oh-my-git.png" width="400">
+<p align="center">
+  <img src="/images/oh-my-git.png" width="400">
+</p>
 
 **Oh My Git!** é um jogo de código aberto para aprender a utilizar a ferramenta GIT!
 
