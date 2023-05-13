@@ -9,9 +9,9 @@ Por exemplo, neste caso, um de nossos clientes deseja que essas linhas do tempo 
 
 Tente juntar as duas! Você será notificado que há um conflito entre as duas! A máquina do tempo irá deixar você escolher como se deve proceder:
 
-Você pode editar os itens problematicos, ela mostrará para vocẽ as seções em conflito.
+Você pode editar os itens problematicos, ela mostrará para você as seções em conflito.
 
-Vocẽ pode manter qualquer uma das duas versões ou criar uma combinação delas!
+você pode manter qualquer uma das duas versões ou criar uma combinação delas!
 
 Remova os marcadores >>>, <<<, e ===, e faça um novo commit para finalizar a junção das linhas do tempo!
 

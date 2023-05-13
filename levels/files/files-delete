@@ -5,13 +5,13 @@ cards = file-delete
 
 O primeiro dia na escola de viagem no tempo chega ao fim e você recebe a chave do seu quarto.
 
-Totalmente empolgado você abre a porta para apenas encontrar.. Teias de aranha! Teias de aranha em todo o lugar! 
+Totalmente empolgado você abre a porta para apenas encontrar.. Teias de aranha?! Teias de aranha em todo o lugar! 
 
 Remova todas as teias de aranha, você pode realizar isto com o cartão de remoção!
 
 [cli]
 
-Na linha de comando, você pode facilmente deletar todos os arquivos que iniciam com teia- usando este comando:
+Na linha de comando, você pode facilmente deletar todos os arquivos que iniciam com teia_ usando este comando:
 
     rm teia_*
 

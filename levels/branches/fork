@@ -11,7 +11,7 @@ Consegue descobrir quando foi que as coisas deram errado neste zoológico? Entã
 
 O animal azul representa um conceito conhecido como "ponteiro HEAD" no GIT.
 
-Ele mostra para você qual é o atual commit e para qual ele está apontando, em outras palavras, significa também o momento onde vocẽ está na linha do tempo. 
+Ele mostra para você qual é o atual commit e para qual ele está apontando, em outras palavras, significa também o momento onde você está na linha do tempo. 
 
 Esta é uma dica interessante para ir ao commit anterior:
 

@@ -52,7 +52,7 @@ Você tem café.
 
 Você não tem uma rosquinha." > voce
 git add .
-git commit -m "Vocẽ compra um café."
+git commit -m "você compra um café."
 
 echo "Você não tem uma baguete.
 

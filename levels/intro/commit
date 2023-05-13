@@ -11,7 +11,7 @@ Você pode usar sua máquina do tempo para fazer cópias instantâneas (snapshot
 
 Novamente, ao invés de usar o cartão, você pode também digitar comandos e o retorno deles serão exibidos dentro do terminal preto abaixo!
 
-Claro, isto é totalmente opcional, no entanto será uma habilidade super útil no mundo real - e isso também lhe dará um emblema dourado e brilhante no jogo quando o level for concluído! :)
+Claro, isto é totalmente opcional, no entanto será uma habilidade super útil no mundo real - e isso também lhe dará um emblema dourado e brilhante no jogo quando a fase for concluída! :)
 
 [setup]
 
@@ -32,4 +32,4 @@ git rev-parse HEAD^ && ! test "$(git show main:copo)" = "O copo está cheio de �
 
 Muito bem!
 
-Você concluiu o level mas ainda pode tentar criar alguns commits adicionais se quiser, e, quando você se sentir confortável, poderá clicar em "Próximo Nível!".
+Você concluiu esta fase mas ainda pode tentar criar alguns commits adicionais se quiser, e, quando você se sentir confortável, poderá clicar em "Próximo Nível!".

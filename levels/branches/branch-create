@@ -7,7 +7,7 @@ Você foi convidado(a) para duas festas! Em uma delas, sua banda favorita está 
 
 Não se preocupe - como um(a) agente de viagem no tempo em treinamento, você poderá ir às duas festas!
 
-Para fazer isso de forma mais simples, para marcar qual linha do tempo é qual, vocẽ pode criar portais do tempo! (nós chamamos isto de "branch")
+Para fazer isso de forma mais simples, para marcar qual linha do tempo é qual, você pode criar portais do tempo! (nós chamamos isto de "branch")
 
 [cli]
 
@@ -44,6 +44,6 @@ git show concerto | grep 'para o concerto'
 
 [congrats]
 
-Agora vocẽ pode viajar entre suas branches facilmente usando `git checkout <nome da branch>` - tente isso!
+Agora você pode viajar entre suas branches facilmente usando `git checkout <nome da branch>` - tente isso!
 
 Seu amigo(a) está muito feliz que você chegou na festa de aniversário dele, e você também teve seu ingresso do concerto autografado. Eu goooxtum...

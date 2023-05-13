@@ -3,7 +3,7 @@ cards = checkout commit-auto merge merge-abort
 
 [description]
 
-Algumas vezes pode acontecer de você querer juntar dois commits, mas ocorre um conflito que vocẽ não ta afim de resolver agora.
+Algumas vezes pode acontecer de você querer juntar dois commits, mas ocorre um conflito que você não ta afim de resolver agora.
 
 Nessas situações você pode abortar o merge para deixar para outra hora. Use:
 

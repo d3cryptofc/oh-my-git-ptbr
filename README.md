@@ -33,7 +33,7 @@ Boa sorte! ❤️
 
 Se alguma coisa não funcionou ou parece quebrado, por favor deixe-nos saber! Você pode descrever o problema que estiver ocorrendo [abrindo uma issue no projeto original](https://github.com/git-learning-game/oh-my-git/issues).
 
-E se caso você possua alguma ideia para um novo recurso, ficariamos felizes em te ouvir sobre! Também nesse caso, convidamos vocẽ pra [abrir uma issue](https://github.com/git-learning-game/oh-my-git/issues).
+E se caso você possua alguma ideia para um novo recurso, ficariamos felizes em te ouvir sobre! Também nesse caso, convidamos você pra [abrir uma issue](https://github.com/git-learning-game/oh-my-git/issues).
 
 ## Construa sua própria fase! 🧩
 
@@ -45,7 +45,7 @@ Quer contruir sua própria fase? Ótimo! Aqui está como fazer isto:
 1. Fique um pouco familiarizado com as fases que estão lá atualmente.
 1. Dê uma olhada no diretório `levels`. É dividido em capítulos e cada fase é um arquivo.
 1. Faça uma cópia de uma fase existente ou comece a escrever o seu próprio. Veja a documentação do formato abaixo.
-1. Escreva e teste sua fase. Se vocẽ estiver feliz com isso, sinta-se livre para envia-la para nós em um pull request! <3
+1. Escreva e teste sua fase. Se você estiver feliz com isso, sinta-se livre para envia-la para nós em um pull request! <3
 
 ### Formato da fase ✍️
 
@@ -96,7 +96,7 @@ git commit -m "commit inicial"
 test "$(git show HEAD:people_who_are_awesome | wc -l)" -ge 2
 ```
 
-Uma fase pode consistir de múltiplos repositórios. Para ter mais de um, vocẽ pode usar seções como `[setup <name>]` e `[win <name>]`, onde `<name>` é o nome do remote. O nome do remote padrão é "yours". Todos os repositórios irão adicionar um ao outro como remote. Veja alguns exemplos de fases usando [remote](levels/remote).
+Uma fase pode consistir de múltiplos repositórios. Para ter mais de um, você pode usar seções como `[setup <name>]` e `[win <name>]`, onde `<name>` é o nome do remote. O nome do remote padrão é "yours". Todos os repositórios irão adicionar um ao outro como remote. Veja alguns exemplos de fases usando [remote](levels/remote).
 
 ### Orientação de fase
 

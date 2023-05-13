@@ -7,7 +7,7 @@ Observe que há duas opções para "viajar até o final de uma linha do tempo":
 
 Primeiro, você pode viajar diretamente para o commit, como temos feito isso antes.
 
-E segundo, vocẽ pode viajar usando o nome/etiqueta da branch. Nesse caso, quando você faz um novo commit, a branch crescerá com vocẽ, e ainda irá apontar para o final da linha do tempo (seu ultimo commit)!
+E segundo, você pode viajar usando o nome/etiqueta da branch. Nesse caso, quando você faz um novo commit, a branch crescerá com você, e ainda irá apontar para o final da linha do tempo (seu ultimo commit)!
 
 [cli]
 
@@ -55,6 +55,6 @@ Você foi muito bem!
 
 Note que o ramo (branch) só irá acompanhar seus novos commits caso o HEAD (ponteiro que informa onde você está no tempo) esteja apontando para sua branch.
 
-Em outras palavras, a branch só irá acompanhar os novos commits caso vocẽ estiver acompanhando ela ao invés de um commit.
+Em outras palavras, a branch só irá acompanhar os novos commits caso você estiver acompanhando ela ao invés de um commit.
 
-Enquanto que ao estar em um commit vocẽ não acompanha os novos automaticamente, sendo necessário usar `git checkout` e acrescentar o identificador único do commit para segui-lo.
+Enquanto que ao estar em um commit você não acompanha os novos automaticamente, sendo necessário usar `git checkout` e acrescentar o identificador único do commit para segui-lo.
