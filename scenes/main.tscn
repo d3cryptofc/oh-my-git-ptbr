@@ -131,6 +131,7 @@ visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 size_flags_vertical = 3
+custom_colors/default_color = Color( 0.219608, 0.972549, 0.266667, 1 )
 bbcode_enabled = true
 bbcode_text = "Level description here!"
 text = "Level description here!"
@@ -207,7 +208,7 @@ __meta__ = {
 }
 
 [node name="BackButton" type="Button" parent="Menu"]
-margin_right = 65.0
+margin_right = 78.0
 margin_bottom = 39.0
 focus_mode = 0
 enabled_focus_mode = 0
@@ -217,8 +218,8 @@ __meta__ = {
 }
 
 [node name="ReloadButton2" type="Button" parent="Menu"]
-margin_left = 73.0
-margin_right = 161.0
+margin_left = 86.0
+margin_right = 208.0
 margin_bottom = 39.0
 focus_mode = 0
 enabled_focus_mode = 0
@@ -252,21 +253,21 @@ __meta__ = {
 }
 
 [node name="Button3" parent="Menu" instance=ExtResource( 11 )]
-margin_left = 169.0
+margin_left = 216.0
 margin_top = 0.0
-margin_right = 315.0
+margin_right = 303.0
 margin_bottom = 39.0
 
 [node name="CLIBadge" parent="Menu" instance=ExtResource( 10 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 323.0
-margin_right = 368.0
+margin_left = 311.0
+margin_right = 356.0
 margin_bottom = 39.0
 
 [node name="NextLevelButton" type="Button" parent="Menu"]
-margin_left = 376.0
-margin_right = 493.0
+margin_left = 364.0
+margin_right = 520.0
 margin_bottom = 39.0
 focus_mode = 0
 custom_styles/hover = SubResource( 2 )
