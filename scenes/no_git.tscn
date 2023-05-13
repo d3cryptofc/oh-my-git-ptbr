@@ -25,25 +25,13 @@ __meta__ = {
 
 [node name="Label2" type="Label" parent="."]
 margin_left = 797.196
-margin_top = 545.117
+margin_top = 550.117
 margin_right = 1138.2
-margin_bottom = 601.117
+margin_bottom = 611.117
 custom_fonts/font = ExtResource( 5 )
 custom_colors/font_color = Color( 0.533333, 0.392157, 0.392157, 1 )
-text = "by bleeptrack & blinry"
-align = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Label3" type="Label" parent="."]
-margin_left = 716.131
-margin_top = 572.398
-margin_right = 1216.13
-margin_bottom = 628.398
-custom_fonts/font = ExtResource( 5 )
-custom_colors/font_color = Color( 0.533333, 0.392157, 0.392157, 1 )
-text = "Original score by winniehell"
+text = "by bleeptrack & blinry, winniehell
+Tradução PT-BR por Lelzin"
 align = 1
 __meta__ = {
 "_edit_use_anchors_": false
@@ -73,7 +61,7 @@ text = "Sandbox"
 [node name="Button2" type="Button" parent="VBoxContainer"]
 margin_right = 351.0
 margin_bottom = 39.0
-text = "Sure, I'll install it!"
+text = "Beleza, irei instalar."
 
 [node name="Sprite" type="Sprite" parent="."]
 
@@ -94,12 +82,15 @@ margin_left = 20.0
 margin_top = 21.0
 margin_right = 546.0
 margin_bottom = 252.0
-text = "Hi! It seems that you don't have Git installed yet!
+text = "Hum.. Parece que você não possui o GIT instalado :(
 
-On Linux, please install it from your package manager, usually the package is called \"git\"!
+No Linux, por favor instale ele pelo seu gerenciador de pacotes, o nome do pacote costuma ser \"git\"!
 
-On macOS 10.8 and below, you can download Git from git-scm.com."
+No macOS 10.8 e versões inferiores, você pode baixar o GIT no site git-scm.com."
 autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="pressed" from="VBoxContainer/Button" to="." method="levels"]
 [connection signal="pressed" from="VBoxContainer/Button3" to="." method="sandbox"]
 [connection signal="pressed" from="VBoxContainer/Button2" to="." method="quit"]
