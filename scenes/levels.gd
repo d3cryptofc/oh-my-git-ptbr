@@ -24,21 +24,12 @@ func reload():
 	dir.list_dir_end()
 	chapter_names.sort()
 	
-	var final_chapter_sequence = []
-	
-	var chapter_sequence = Array(helpers.read_file("res://levels/sequence", "").split("\n"))
-	
-	for chapter in chapter_sequence:
-		if chapter == "":
+	var config = ConfigFile.new()
+	config.load('res://levels/sequence')
+	for chapter_dirname in config.get_section_keys('sequence'):
+		if not chapter_names.has(chapter_dirname):
 			continue
-		if not chapter_names.has(chapter):
-			helpers.crash("Chapter '%s' is specified in the sequence, but could not be found" % chapter)
-		chapter_names.erase(chapter)
-		final_chapter_sequence.push_back(chapter)
-	
-	#final_chapter_sequence += chapter_names
-	
-	for c in final_chapter_sequence:
+		var chapter_name = config.get_value('sequence', chapter_dirname)
 		var chapter = Chapter.new()
-		chapter.load("res://levels/%s" % c)
+		chapter.load("res://levels/%s" % chapter_dirname, chapter_name)
 		chapters.push_back(chapter)

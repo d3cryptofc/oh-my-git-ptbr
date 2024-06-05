@@ -2,12 +2,13 @@ extends Node
 class_name Chapter
 
 var slug
+var fullname
 var levels
 
 # Path is an outer path.
-func load(path):
+func load(path, cfullname):
 	levels = []
-	
+	fullname = cfullname
 	var parts = path.split("/")
 	slug = parts[parts.size()-1]
 	
