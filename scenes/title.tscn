@@ -15,14 +15,14 @@ __meta__ = {
 }
 
 [node name="Label2" type="Label" parent="."]
-margin_left = 790.778
-margin_top = 681.816
-margin_right = 1131.78
-margin_bottom = 742.816
+margin_left = 641.107
+margin_top = 686.257
+margin_right = 1273.11
+margin_bottom = 747.257
 custom_fonts/font = ExtResource( 5 )
 custom_colors/font_color = Color( 0.533333, 0.392157, 0.392157, 1 )
-text = "por bleeptrack & blinry, winniehell
-Tradução PT-BR por Lelzin"
+text = "Originalmente feito por bleeptrack e blinry, música por winniehell
+Fork: d3cryptofc/oh-my-git-ptbr"
 align = 1
 __meta__ = {
 "_edit_use_anchors_": false
