@@ -78,7 +78,7 @@ Pode conter informação adicional, ou exercícios extras para praticar.
 # Um `git init` inicial sempre é feito automaticamente.
 # A branch padrão ao inicilaizar chama-se 'main'.
 
-echo "Você" > pessoa_que_eh_incrivel
+echo "Você" > pessoas_que_sao_incriveis
 git add .
 git commit -m "commit inicial"
 
@@ -95,7 +95,7 @@ git commit -m "commit inicial"
 # jogo como uma condição de conquista.
 
 # Verifica se no arquivo do último commit possui duas linhas:
-test "$(git show HEAD:people_who_are_awesome | wc -l)" -ge 2
+test "$(git show HEAD:pessoas_que_sao_incriveis | wc -l)" -ge 2
 ```
 
 Uma fase pode consistir de múltiplos repositórios. Para ter mais de um, você pode usar seções como `[setup <name>]` e `[win <name>]`, onde `<name>` é o nome do remote. O nome do remote padrão é "yours". Todos os repositórios irão adicionar um ao outro como remote. Veja alguns exemplos de fases usando [remote](levels/remote).
