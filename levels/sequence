@@ -1,13 +1,14 @@
-intro
-files
-branches
-merge
-index
-remotes
-changing-the-past
-shit-happens
-workflows
-bisect
-stash
-tags
-sandbox
+[sequence]
+intro="Introdução"
+files="Arquivos"
+branches="Ramificações (branches)"
+merge="Mesclagem (merge)"
+index="Índice (index)"
+remotes="Repositórios remotos (remotes)"
+changing-the-past="Alterando o passado"
+shit-happens="Deu m****"
+workflows="Fluxos de trabalho (workflows)"
+bisect="Busca binária (bisect)"
+stash="Esconderijo (stash)"
+tags="Etiquetas (tags)"
+sandbox="Ambiente de teste"
