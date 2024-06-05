@@ -100,13 +100,10 @@ func children_set(new_children):
 	for c in new_children:
 		if not children.has(c):
 			var a = arrow.instance()
+			a.source = id
+			a.target = c
 			if type == "commit":
-				a.source = c
-				a.target = id
 				a.color = Color("c2bf26")
-			else:
-				a.source = id
-				a.target = c
 			a.repository = repository
 			$Arrows.add_child(a)  
 	children = new_children
