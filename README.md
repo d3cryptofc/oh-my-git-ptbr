@@ -8,6 +8,8 @@
 
 ## Jogue o jogo! 🎮
 
+<img src="https://svgshare.com/i/16rs.svg" align="right" width="160">
+
 ###### Plataformas suportadas:
 Linux, MacOS e Windows
 
